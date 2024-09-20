@@ -88,10 +88,11 @@ sections:
         - title: Software Engineer
           company: Sellinnate SRL
           company_url: "https://sellinnate.com/"
+          company_logo: "knauf"
           location: Florence, Italy
           date_start: "2024-11-27"
           date_end: "2024-07-31"
-          description: <ul><li>CAD Plugin Developer for <a href="https://knauf.com/en" target="_blank">Knauf Digital GmBh</a> (main project)<ul><li>Improved build speed of CI/CD workflows for macOs and Windows by 54.54%.</li></ul></li></ul>
+          description: I held the position of CAD plug-in developer for a href="https://knauf.com/en" target="_blank">Knauf Digital GmBh</a>, I was responsible for the entire development of Archicad. This included both the development of new features and bug fixes, as well as the CI/CD pipeline for the distribution of this plug-in version.
 
         - title: Software Engineer Intern
           company: Verve Ventures AG
