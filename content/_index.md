@@ -86,15 +86,15 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
         - title: Software Engineer
-          company: Sellinnate
+          company: Sellinnate SRL
           company_url: "https://sellinnate.com/"
           location: Florence, Italy
           date_start: "2024-11-27"
-          date_end: ""
+          date_end: "2024-07-31"
           description: <ul><li>CAD Plugin Developer for <a href="https://knauf.com/en" target="_blank">Knauf Digital GmBh</a> (main project)<ul><li>Improved build speed of CI/CD workflows for macOs and Windows by 54.54%.</li></ul></li></ul>
 
         - title: Software Engineer Intern
-          company: Verve Ventures
+          company: Verve Ventures AG
           company_url: "https://www.verve.vc/"
           company_logo: "verve"
           location: Zurich, Switzerland
@@ -103,7 +103,7 @@ sections:
           description: Work experience as a Full-Stack Software Engineer, I learned how to work with various stack technologies. I developed several features on the main code base and implemented a script for exchanging sensitive investor information.
 
         - title: Software Developer Intern
-          company: Altec S.R.L.
+          company: Altec SRL
           company_url: "https://www.altecsoftware.com/"
           company_logo: "altec"
           location: Arona, Italy
