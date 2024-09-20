@@ -85,14 +85,14 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Software Engineer
+        - title: Software Engineer Consultant
           company: Sellinnate SRL
           company_url: "https://sellinnate.com/"
           company_logo: "knauf"
-          location: Florence, Italy
+          location: Florence, Italy (Remote)
           date_start: "2024-11-27"
           date_end: "2024-07-31"
-          description: I held the position of CAD plug-in developer for a href="https://knauf.com/en" target="_blank">Knauf Digital GmBh</a>, I was responsible for the entire development of Archicad. This included both the development of new features and bug fixes, as well as the CI/CD pipeline for the distribution of this plug-in version.
+          description: I held the position of CAD plug-in developer for <a href="https://knauf.com/en" target="_blank">Knauf Digital GmBh</a>, I was responsible for the entire development of Archicad. This included both the development of new features and bug fixes, as well as the CI/CD pipeline for the distribution of this plug-in version.
 
         - title: Software Engineer Intern
           company: Verve Ventures AG
