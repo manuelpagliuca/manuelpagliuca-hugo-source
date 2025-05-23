@@ -77,7 +77,7 @@ email: 'pagliuca.manuel@gmail.com'
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Hello! 👋🏻 I am Manuel, a 27-year-old computer scientist who recently completed my Master's degree 🎓 (09/10/2023). I chose to pursue a master's degree to broaden my horizons in the field of Computer Science, while gaining valuable practical experience through internships in the working world.
+Hello! 👋🏻 I am Manuel, a 28-year-old computer scientist who recently completed my Master's degree 🎓 (09/10/2023). I chose to pursue a master's degree to broaden my horizons in the field of Computer Science, while gaining valuable practical experience through internships in the working world.
 
 I am currently working on tidying up some things in my life; I do not yet have an occupation.
 
