@@ -338,21 +338,21 @@ sections:
       #   country_code: IT
       # directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
       office_hours:
-        - 'Mon-Fri 09:00 to 12:00'
+        #- 'Mon-Fri 09:00 to 12:00'
         # - 'Wednesday 09:00 to 10:00'
       contact_links:
         # - icon: twitter
         #   icon_pack: fab
         #   name: DM Me
         #   link: 'https://twitter.com/manuelpagliuca'
-        - icon: skype
-          icon_pack: fab
-          name: Skype Me
-          link: 'skype:live:.cid.112d3cb29c20d377?call'
-        - icon: video
-          icon_pack: fas
-          name: Zoom Me
-          link: 'https://zoom.com'
+        #- icon: skype
+        #  icon_pack: fab
+        #  name: Skype Me
+        #  link: 'skype:live:.cid.112d3cb29c20d377?call'
+        #- icon: video
+        #  icon_pack: fas
+        #  name: Zoom Me
+        #  link: 'https://zoom.com'
       # Automatically link email and phone or display as text?
       autolink: true
       # Email form provider
