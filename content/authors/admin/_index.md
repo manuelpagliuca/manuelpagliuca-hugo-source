@@ -77,16 +77,16 @@ email: 'pagliuca.manuel@gmail.com'
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Hello! 👋🏻 I am Manuel, a 28-year-old computer scientist who recently completed my Master's degree 🎓 (09/10/2023). I chose to pursue a master's degree to broaden my horizons in the field of Computer Science, while gaining valuable practical experience through internships in the working world.
+Hello! 👋🏻 I am Manuel, a 29-year-old Software Engineer. 
 
-I am currently working on tidying up some things in my life; I do not yet have an occupation.
+Since early age I've passion for computers and videogames.
 
-I've always had a deep passion for computer programming and the world related to it. I've developed a strong interest in many fields, in particular:
+During my journey I developed a strong interest in many fields of this science, my favorites are the following:
 
 - **Algorithms & Data Structures**
 - **Distributed Systems**
 - **Computer Graphics**
-- **Artificial Intelligence**
+- **AI & AI4V**
 - **Computer Vision**
 
 For this reason, I am a passionate programmer, in that what I love to do most is to design solutions that effectively address problems and then improve their performance. I have worked with several programming languages and see them as tools to help the programmer implement the actual solution, I do not see them as the end goal.
