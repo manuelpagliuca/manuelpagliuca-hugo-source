@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: M.Sc. in Computer Science
+role: Software Engineer
 
 # Organizations/Affiliations to show in About widget
 organizations:
