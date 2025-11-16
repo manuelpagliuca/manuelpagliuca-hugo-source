@@ -86,7 +86,7 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
         - title: Software Engineer
-          company: Satispay S.p.A.
+          company: Satispay SPA
           company_url: "https://www.satispay.com/"
           company_logo: "satispay"
           location: Milan, Italy
