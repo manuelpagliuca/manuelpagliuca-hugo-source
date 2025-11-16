@@ -91,8 +91,8 @@ sections:
           company_logo: "satispay"
           location: Milan, Italy
           date_start: "2024-10-08"
-          date_end: ""
-          description:
+          date_end: "2025-11-12"
+          description: (incoming)
 
         - title: Software Engineer Consultant
           company: Sellinnate SRL

@@ -19,15 +19,15 @@ role: Software Engineer
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: TrueLayer
-    url: https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-magistrale
-  - name: University of Milan
-    url: https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-magistrale
+    url: https://truelayer.com/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My studies include Real-Time Graphics, GP-GPU, Artificial Intelligence and Distributed Systems.
+bio: My interests concern Distributed Systems, Payments, Real-Time Graphics, GP-GPU and Artificial Intelligence.
 
 # Interests to show in About widget
 interests:
+  - Distributed Systems
+  - Payments
   - Algorithms
   - Problem Solving
   - Computer Graphics
