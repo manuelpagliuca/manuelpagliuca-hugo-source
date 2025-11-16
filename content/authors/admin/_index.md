@@ -18,6 +18,8 @@ role: Software Engineer
 
 # Organizations/Affiliations to show in About widget
 organizations:
+  - name: TrueLayer
+    url: https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-magistrale
   - name: University of Milan
     url: https://www.unimi.it/it/corsi/corsi-di-laurea/informatica-magistrale
 
