@@ -86,6 +86,14 @@ sections:
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
         - title: Software Engineer
+          company: TrueLayer
+          company_url: "https://www.truelayer.com/"
+          company_logo: "satispay"
+          location: Milan, Italy
+          date_start: "2025-11-17"
+          description: (incoming)
+
+        - title: Software Engineer
           company: Satispay SPA
           company_url: "https://www.satispay.com/"
           company_logo: "satispay"
