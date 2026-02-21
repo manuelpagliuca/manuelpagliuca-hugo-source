@@ -29,9 +29,9 @@ url_video: ""
 ---
 Personal project, December 2023
 
-Between the months of November and December I wanted to dig deeper on software engineering, so I decided to study and implement some design patterns. In particular the fundamental one from the *Gang of Four* (GoF).
+Between November and December, I wanted to dive deeper into software engineering, so I decided to study and implement some design patterns. In particular the fundamental ones from the *Gang of Four* (GoF).
 
-I created a [repository](https://github.com/manuelpagliuca/design-patterns-cpp) that acts as a collection of C++ implementations of these patterns. The GoF patterns are all presents but in the future I'm planning to add also the "extra" patterns (at the moment only the *null object* is present).
+I created a [repository](https://github.com/manuelpagliuca/design-patterns-cpp) that serves as a collection of C++ implementations of these patterns. All the GoF patterns are present, but in the future I plan to add the "extra" patterns as well (currently only the *null object* is included).
 
 ## Creational
 | Design Pattern          | Description                                                                                     |
@@ -68,8 +68,8 @@ I created a [repository](https://github.com/manuelpagliuca/design-patterns-cpp) 
 | Template Method            | Defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior. |
 | Visitor                    | Separates an algorithm from an object structure by moving the hierarchy of methods into one object.|
 
-During this exploration I discovered many interesting aspects of software engineering by exploring this field, especially a concept of scope level design patterns. Some design patterns can be applied directly on the repository (code level, so in micro), like the GoF patterns or *concurrency patterns* for MT paradigms.
+During this exploration, I discovered many interesting aspects of software engineering, especially the concept of scope-level design patterns. Some design patterns can be applied directly to the codebase (code level, or micro), such as the GoF patterns or *concurrency patterns* for multi-threaded paradigms.
 
-Other design patterns acts on an higher level of abstraction, and these are called **architectural patterns**. Some of them are widely known like the MVC (Model-View-Controller) or n-tier, but most of them are new to me.
+Other design patterns act on a higher level of abstraction, and these are called **architectural patterns**. Some of them are widely known, such as MVC (Model-View-Controller) or n-tier architecture, but most are new to me.
 
-In the future I would like to write a blog post about them with diagrams and explanations, seems a good idea for studying them in a fun way 😁
+In the future, I would like to write a blog post about them with diagrams and explanations. It seems like a good idea for studying them in a fun way 😁

@@ -34,20 +34,20 @@ Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer
 ## About the project
 This is a unified project for the courses Affective Computing and Natural Interaction at [PhuseLab](https://phuselab.di.unimi.it/), University of Milan, A.Y. 2021/2022.
 
-The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.
+The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat pain stimulus using a physical device.
 
-Their facial expressions and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.
+Facial expressions and biophysical signals were recorded using cameras and electrodes, after which features were extracted. The descriptors from two different modalities were combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.
 * For more information about the project download the [report](/uploads/Pain_Detection_Manuel_Pagliuca_AC_NI_2022.pdf).
 
 ![Diagram](/uploads/diagram.jpg)
 
-Pain stimulation occurs in patients through electrostimulators applied to the wrists. When this experiment is performed different bio-potential signals (GSR, EMG, ...) and facial expressions are recorded through (through a video camera).
+Pain stimulation occurs in patients through electrostimulators applied to the wrists. During this experiment, different biophysical signals (GSR, EMG, ...) and facial expressions are recorded using a video camera.
 
-The analysis phase involves extracting features from the video signals through computer vision techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.
+The analysis phase involves extracting features from the video signals using computer vision techniques. The features are Euclidean distances between specific facial landmarks and gradients in five regions of the face.
 
-Once the biopotential signals and video features are ready, fusion techniques are used to perform classification.
-- **Early fusion** involves fusing signals and video features a priori concerning classification. Then train the classifier on the combined inputs.
-- **Late fusion** involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video), then for each sample in the testing set its prediction is calculated with all three classifiers. The majority prediction is considered; if that prediction coincides with the *ground truth*, then that prediction is considered correct.
+Once the biophysical signals and video features are ready, fusion techniques are used for classification.
+- **Early fusion** involves combining signals and video features before classification, then training the classifier on the combined inputs.
+- **Late fusion** involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video). For each sample in the testing set, the prediction is calculated with all three classifiers. The majority prediction is considered correct if it matches the *ground truth*.
 
 The classifier used in this project was *Support Vector Machines*.
 
@@ -71,12 +71,12 @@ The computer vision techniques used were for the extraction of facial distances,
 
 ### Gradient for face folds
 Gradients allow changes in regions of the face to be assessed. An arithmetic average of pixel values in these regions is calculated.
-This average is again weighted by the number of frames in the video window(which in the dataset was 5 seconds).
+This average is then weighted by the number of frames in the video window (5 seconds in this dataset).
 
 ![Facial Gradients](/uploads/facial_gradients.gif)
 
 ### Switch button
-There is a debug branch called `cv-features` in this repository where you can try computer vision systems directly with your computer camera. Using the tab key you can enable and disable debugging for gradients.
+A debug branch called `cv-features` in this repository allows you to test computer vision systems directly with your computer's camera. Using the tab key you can enable and disable debugging for gradients.
 
 ![Switch](/uploads/switch.gif)
 

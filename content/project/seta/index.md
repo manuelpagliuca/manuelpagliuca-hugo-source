@@ -74,46 +74,46 @@ The algorithm was developed for guarantee the mutual exclusion to a critical sec
 
 The timestamps of the messages are sent in broadcast (in parallel) through the gRPC call `coordinateRechargeStream()`. The logical clock synchronization is guaranteed through **Lamport's algorithm**.
 
-Let's consider the following diagram, the nodes in red want to access to the critical section, while the other nodes are doing anything else.
+Consider the following diagram: the nodes in red want to access the critical section, while the other nodes are doing something else.
 
 ![Ricart & Agrawala 1](/uploads/ricart_agrawala_1.png)
 
-More in depth in the first phase (in which the requests are parallelized) the processes will build their lists of dependent nodes. These lists will contain all the nodes which got a smaller timestamp relative to their.
+In more depth, in the first phase (in which the requests are parallelized), the processes will build their lists of dependent nodes. These lists will contain all the nodes which got a smaller timestamp relative to theirs.
 
-A node will be able to enter a critical section (*i.e.*, in this project is the recharging operation) if it receives the ACKs from all the other nodes. If this doesn't happens it will have to wait the residual ACKs.
+A node will be able to enter a critical section (i.e., the recharging operation in this project) if it receives acknowledgments from all other nodes. If this doesn't happen, it will have to wait for the remaining acknowledgments.
 
 ![Ricart & Agrawala 2](/uploads/ricart_agrawala_2.png)
 
-Once that a node has finished with the recharging operation, it will sends an ACK message to the taxi of his list/queue. The first taxis who will fill the number of attended ACKs will access the critical section, and then story repeats.
+Once a node has finished the recharging operation, it sends an ACK message to the taxis in its list/queue. The first taxi to receive the required number of acknowledgments will access the critical section, and then the process repeats.
 
 ![Ricart & Agrawala 3](/uploads/ricart_agrawala_3.png)
 
 ### Ride election algorithm
 The SETA process generates two rides each 5 seconds on a random district, these two rides are posted on the respective topic of the district. Each taxi is subscribed only on the topic of the district in which it currently belongs.
 
-For simplicity let's assume only one ride (the ride 5) to be published from the SETA process on the first district. All the processes which are subscribed to this topic (inside the green circle) will receive the message for the ride 5.
+For simplicity, let's assume only one ride (ride 5) is published by the SETA process on the first district. All processes subscribed to this topic (inside the green circle) will receive the message for ride 5.
 
 ![Ride Election 1](/uploads/ride_election_1.png)
 
-An election mechanism will start through the gRPC call `coordinateRideStream()`, the request will be performed in broadcast (also to taxi out from district 1) and they will be executed in parallel. The request will contain the *Euclidean distance to the starting point*, the *battery levels* and the *ID* of taxi which is sending the request.
+An election mechanism will start through the gRPC call `coordinateRideStream()`. The request will be broadcast (including to taxis outside district 1) and executed in parallel. The request will contain the *Euclidean distance to the starting point*, the *battery levels* and the *ID* of taxi which is sending the request.
 
-For sake of simplicity we are seeing the evolution of the algorithm only from the point of view of the process 1.
+For simplicity, we are examining the evolution of the algorithm from the perspective of process 1.
 
 ![Ride Election 2](/uploads/ride_election_2.png)
 
 
-Let's also assume that the process 1 is the process with the smallest distance from the starting point of the ride. Essentially, this means that the taxi who receives the request will all answer with an ACK (this means that they got a worst distance, battery or grater ID respect to process 1), only in this case the process 1 will achieve the consensus.
+Let's also assume that process 1 has the smallest distance from the ride's starting point. Essentially, this means that the taxis receiving the request will all answer with an ACK (meaning they have a worse distance, battery level, or greater ID than process 1). Only then will process 1 achieve consensus.
 
 ![Ride Election 3](/uploads/ride_election_3.png)
 
-Now the process 1 can execute the ride 5, before it even pass to the local execution of the ride, it publish a message containing the ride 5 on the `seta/smartcity/completed` topic. This will allow to stop recycling this message (we will see what is it below) and also making know to the taxi which ride ignore since it is already taken.
+Now process 1 can execute ride 5. Before it passes to local execution of the ride, it publishes a message containing ride 5 on the `seta/smartcity/completed` topic. This allows stopping the recycling of this message (we will see what this is below) and informs taxis which rides to ignore since they are already taken.
 
-This because all the taxi will have a local list containing all the completed rides taken from the topic, in this way they know which ride to avoid.
+This is because all taxis will have a local list containing all the completed rides from the topic, so they know which rides to avoid.
 
 ![Ride Election 4](/uploads/ride_election_4.png)
 
 #### Ride recycling
-There is a system that enforces the recycling of runs, each run that is generated on the topics is embedded within the relative queue of the district. The priority of the queues is based on the order (run ID) of run generation, so older runs will be preferred.
+A system enforces ride recycling. Each ride generated on the topics is embedded within the respective district queue. The queue priority is based on ride generation order (ride ID), so older rides are preferred.
 
 ![Ride Recycling](/uploads/ride_recycling.png)
 
@@ -127,13 +127,13 @@ This approach is designed in such a way as to avoid "*busy waiting*" phenomena. 
 ![Busy Waiting](/uploads/busy_waiting.png)
 
 ### Recharge operation
-There is a thread that monitors cab battery levels (**Recharge Thread**), to avoid "*busy waiting*" phenomena a *dummy object* is shared between this thread and the **MQTT module**.
+A thread monitors cab battery levels (**Recharge Thread**). To avoid "*busy waiting*" phenomena, a *dummy object* is shared between this thread and the **MQTT module**.
 
 The recharge thread is initially waiting and will check the battery levels only after receiving the notification on the shared *dummy object*.
 
-As we know, the MQTT module receives races message for it's own district, and its callbacks can in turn call methods (which basically function like threads). Upon completion of the function that takes care of the run we notify the *dummy object* through `notify()`.
+The MQTT module receives ride messages for its own district, and its callbacks can call methods (which function like threads). Upon completion of the function that handles the ride, we notify the *dummy object* through `notify()`.
 
-This way a check of battery levels will be made after a run is finished. The charging procedure will only be started if the battery levels are below 30 percent.
+This way, a battery level check is made after a ride is finished. The charging procedure will only be started if the battery levels are below 30 percent.
 
 ![Synchronization of recharging spot](/uploads/recharge_synchronization.png)
 
@@ -147,25 +147,25 @@ The collection and submission of local statistics involves different agents :
 
 ![Synchronization of local statistics](/uploads/localstats_synchronization.png)
 
-The reading of measurements is done by the Local Stats Thread, the latter though is governed by the operation of the Pollution Buffer's internal data structure.
+The Local Stats Thread reads the measurements, but its operation is governed by the Pollution Buffer's internal data structure.
 
-Once the array of measurements is read, its average is calculated. Then a data structure is created that will contain both this average of measurements and the other local statistics :
+Once the array of measurements is read, its average is calculated. Then a data structure is created that contains both this average and the other local statistics:
 * Total traveled kilometers
 * Battery levels
 * Total accomplished runs
 
-Every fifteen seconds you will be able to send this data structure to the administrator server via POST, to ensure this you use a thread (Enable Data Thread) that sets a boolean (initialized to false) to true.
+Every fifteen seconds, a POST request sends this data structure to the administrator server. To ensure this, a thread (Enable Data Thread) sets a boolean (initialized to false) to true.
 
-That boolean variable will be checked by the Local Stats Thread, if true, then the POST request will be executed.
+The Local Stats Thread checks this boolean. If it is true, the POST request is executed.
 
-Then the flag will be set to false again, and you will have to wait 15 seconds again for it to be reactivated.
+Then the flag will be set to false again, and it will wait 15 seconds to be reactivated.
 
 #### Sliding window
 The Pollution Buffer presents a method that is constantly called at an unknown time by the PM10 simulator. The Pollution Buffer internal structure consists of a *sliding window* of 50% of size 8 (each element is a PM10 measurements).
 
-Once the maximum capacity of our internal data structure is reached, then I can guarantee that it will be read by the Local Stats Thread. The read operation involves a left shift of 50% of the elements (*i.e.,* 4 elements), henceforth the elements added by the PM10 simulator will be allocated starting from the fifth.
-When the last element (the eighth) is added again, then a new reading of the sliding window can be performed again.
+Once the internal data structure reaches maximum capacity, the Local Stats Thread will read it. The read operation involves a left shift of 50% of the elements (*i.e.,* 4 elements), after which the elements added by the PM10 simulator will be allocated starting from the fifth.
+When the eighth element is added again, a new reading of the sliding window can be performed.
 
-In this way the various sliding windows that are read will share four elements, *i.e.,* the sliding window of iteration `t-1` will have the last four elements equal to the first four elements of the sliding window at time `t`.
+In this way, the various sliding windows that are read will share four elements. That is, the sliding window of iteration `t-1` will have the same last four elements as the first four elements of the sliding window at time `t`.
 
 ![Sliding Window](/uploads/sliding_window.png)

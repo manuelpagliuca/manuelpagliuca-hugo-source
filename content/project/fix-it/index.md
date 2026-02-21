@@ -32,16 +32,16 @@ Bachelor's Thesis, December 2019, B.Sc. in Computer Science @UniUPO
 ## About the thesis
 {{< figure src="img.png" caption="How the flags are shown on the map." numbered="true" >}}
 The complete title of the thesis is *"Fix-it : Stream processing on event-driven system for
-    managing public disservices"*. The project itself consist in developing an **E.D.A.** (Event-Driven Application)
-system that will work on a mobile application called "**Fix-it**", which is developed using Android
+    managing public disservices"*. The project itself consists of developing an **E.D.A.** (Event-Driven Application)
+system that will work with a mobile application called "**Fix-it**", which is developed using Android
 Studio. The system is implemented with **Google Firebase** and **Apache Kafka** (stream processing).
-Different technologies involved in the implementation of this project like REST API, Stream Processing and
-Publisher-Subscribe pattern.
+Different technologies were involved in the implementation of this project, such as REST API, Stream Processing and
+the Publisher-Subscribe pattern.
 
-The project was developed only by just two guys, we used the concepts of the Agile Manifesto to design our workflow, everything was organized with a Kanban Board on Trello so that we could work consistently by breaking the work down into small parts.
+The project was developed by just two people. We used the concepts of the Agile Manifesto to design our workflow, and everything was organized with a Kanban Board on Trello so that we could work consistently by breaking the work down into small parts.
 
-The whole thesis is downloadable as PDF {{< staticref "uploads/Manuel_Pagliuca_Tesi.pdf" "newtab" >}}here{{< /staticref >}}, was
-written using LaTeX on Overleaf, the Abstract is downloadable {{< staticref "uploads/Abstract.pdf" "newtab" >}}here{{< /staticref >}}.
-I attained a presentation of my thesis on Google Meet due to COVID-19, and I talked about my
+The whole thesis is available as a PDF {{< staticref "uploads/Manuel_Pagliuca_Tesi.pdf" "newtab" >}}here{{< /staticref >}} and was
+written using LaTeX on Overleaf. The Abstract is downloadable {{< staticref "uploads/Abstract.pdf" "newtab" >}}here{{< /staticref >}}.
+I gave a presentation of my thesis on Google Meet due to COVID-19, and I talked about my
 work using these {{< staticref "uploads/Slides.pdf" "newtab" >}}slides{{< /staticref >}}. The project was realized under the
 supervision of the Prof. <a href="https://upobook.uniupo.it/davide.cerotti">Davide Cerotti</a>.

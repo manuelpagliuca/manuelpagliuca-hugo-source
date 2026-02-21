@@ -31,10 +31,10 @@ url_files: "uploads/GPU_COMPUTING_RENDERS.zip"
 GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi
 
 ## About the project
-During the course of **GPU Computing** I decided to implement my old version of the Ray Tracer (based on the
+During the **GPU Computing** course, I decided to implement my old version of the Ray Tracer (based on
 *Ray Tracing in One
-    Weekend* from {{< staticref "https://raytracing.github.io/books/RayTracingInOneWeekend.html" "newtab">}}Peter Shirley{{< /staticref >}})
-    on **CUDA**. In {{< staticref "uploads/GPU_COMPUTING___RAY_TRACER.pdf" "newtab">}}this{{< /staticref >}} paper I compared
+    Weekend* by {{< staticref "https://raytracing.github.io/books/RayTracingInOneWeekend.html" "newtab">}}Peter Shirley{{< /staticref >}})
+    in **CUDA**. In {{< staticref "uploads/GPU_COMPUTING___RAY_TRACER.pdf" "newtab">}}this{{< /staticref >}} paper I compared
 the two Ray Tracers underlining the
 huge differences in rendering speed (even without achieving the best warp efficiency).<br><br>
 For the comparison I used the same scene in both the implementation composed by 8 different spheres with

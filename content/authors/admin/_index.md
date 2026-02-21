@@ -79,11 +79,11 @@ email: 'pagliuca.manuel@gmail.com'
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Hello! 👋🏻 I am Manuel, a 29-year-old Software Engineer. 
+Hello! 👋🏻 I am Manuel, a 29-year-old Software Engineer.
 
-Since early age I've passion for computers and videogames.
+Since an early age, I've had a passion for computers and videogames.
 
-During my journey I developed a strong interest in many fields of this science, my favorites are the following:
+During my journey, I developed a strong interest in many fields of this science. My favorites are the following:
 
 - **Algorithms & Data Structures**
 - **Distributed Systems**
@@ -91,7 +91,7 @@ During my journey I developed a strong interest in many fields of this science, 
 - **AI & AI4V**
 - **Computer Vision**
 
-For this reason, I am a passionate programmer, in that what I love to do most is to design solutions that effectively address problems and then improve their performance. I have worked with several programming languages and see them as tools to help the programmer implement the actual solution, I do not see them as the end goal.
+For this reason, I am a passionate programmer. What I love to do most is design solutions that effectively address problems and then improve their performance. I have worked with several programming languages and see them as tools to help the programmer implement the actual solution, not as the end goal.
 
 This corner of the internet is dedicated to a portfolio showcasing my academic and professional journey. However, it's important to emphasize that this space is not solely about serving as a portfolio. It's also a place where I share personal projects, images, posts, and resources.
 

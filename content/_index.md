@@ -333,7 +333,7 @@ sections:
     content:
       title: Contact
       subtitle:
-      text: For more information please feel free to contact me, I am often available 😊
+      text: For more information, please feel free to contact me. I am often available 😊
       # Contact (add or remove contact options as necessary)
       email: pagliuca.manuel@gmail.com
       # appointment_url: 'https://calendly.com'
