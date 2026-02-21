@@ -35,11 +35,10 @@ sections:
   #       gradient_end: '#1976d2'
   #       gradient_start: '#004ba0'
   #       text_color_light: true
-  - block: about.biography
+  - block: resume-biography-3
     id: about
     content:
       title: Biography
-      # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
 
   # Showcase personal skills or business features.

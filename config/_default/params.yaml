@@ -1,116 +1,161 @@
-# SITE SETUP
-# Guide: https://wowchemy.com/docs/getting-started/
-# Documentation: https://wowchemy.com/docs/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+############################
+## HUGO BLOX CONFIGURATION
+## Docs: https://hugoblox.com/docs/
+############################
 
-# Appearance
+hugoblox:
+  version: "2.0"
 
-appearance:
-  theme_day: Minimal
-  theme_night: Minimal
-  font: Minimal
+############################
+## IDENTITY & BRANDING
+############################
+
+identity:
+  name: Manuel Pagliuca
+  organization: ''
+  type: person  # person, organization, local_business
+  tagline: ''
+  description: 'Computer Science enthusiast portfolio and blog.'
+  social:
+    twitter: 'pagliucamanuel'
+
+############################
+## THEME & APPEARANCE
+############################
+
+theme:
+  # Color mode: light, dark, system
+  color_mode: system
+  # Theme pack (choose from hugoblox.com/themes/)
+  theme_pack: minimal
+  # Typography: sans, serif, native
+  font: sans
   font_size: M
 
-# SEO
+############################
+## LAYOUT
+############################
 
-marketing:
-  seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'Computer Science enthusiast portfolio and blog.'
-    twitter: 'pagliucamanuel'
-  analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    google_tag_manager: ''
-    microsoft_clarity: ''  
-  verification:
-    google: ''
-    baidu: ''
+layout:
+  radius: medium
+  spacing: comfortable
+  avatar_shape: circle
 
-# Site header
+############################
+## HEADER
+############################
 
 header:
-  navbar:
-    enable: true
-    align: l
-    show_logo: true
-    show_language: false
-    show_day_night: true
-    show_search: true
-    highlight_active_link: true
+  style: nav-bar
+  sticky: true
+  search: true
+  theme_toggle: true
+  language_switcher: false
 
-# Site footer
+############################
+## FOOTER
+############################
 
 footer:
-  copyright:
-    notice: '© {year} Manuel Pagliuca. This work is licensed under {license}'
-    license:
-      enable: true
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
+  style: minimal
+  language_switcher: false
+  text: ''
 
-# Localization
+############################
+## COPYRIGHT
+############################
+
+copyright:
+  notice: '© {year} Manuel Pagliuca. This work is licensed under {license}'
+  license:
+    enable: true
+    allow_derivatives: false
+    share_alike: true
+    allow_commercial: false
+
+############################
+## SEO
+############################
+
+seo:
+  title: ''
+  local_business_type: ''
+  ai_site_rules: ''
+
+############################
+## CONTENT FEATURES
+############################
+
+content:
+  math:
+    enable: false
+  toc:
+    enable: true
+  reading_time: true
+  citations:
+    style: apa
+
+############################
+## SEARCH
+############################
+
+search:
+  enable: true
+  suggestions: true
+
+############################
+## COMMENTS
+############################
+
+comments:
+  enable: false
+  provider: ''  # giscus, disqus
+  giscus:
+    repo: ''
+    repo_id: ''
+    category: ''
+    category_id: ''
+  disqus:
+    shortname: ''
+
+############################
+## ANALYTICS
+############################
+
+analytics:
+  google:
+    id: ''
+  google_tag_manager:
+    id: ''
+
+############################
+## VERIFICATION
+############################
+
+verification:
+  google: ''
+
+############################
+## REPOSITORY
+############################
+
+repository:
+  url: 'https://github.com/manuelpagliuca/manuelpagliuca.github.io'
+  content_dir: content
+  branch: main
+
+############################
+## LOCALE
+############################
 
 locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
   address_format: en-us
 
-# Site features
-
-features:
-  syntax_highlighter:
-    theme_light: github-light
-    theme_dark: github-dark
-  math:
-    enable: false
-  privacy_pack:
-    enable: false
-  repository:
-    url: 'https://github.com/manuelpagliuca/manuelpagliuca.github.io'
-    content_dir: content
-    branch: main
-  avatar:
-    gravatar: false
-    shape: circle
-  comment:
-    provider: ''
-    disqus:
-      shortname: ''
-      show_count: true
-    commento:
-      url: 'https://cdn.commento.io/js/commento.js'
-    giscus:
-      repo: ''
-      repo_id: ''
-      category: ''
-      category_id: ''
-  search:
-    provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
-  map:
-    provider: ''
-    api_key: ''
-    zoom: 15
-
-# Extensions
-
-extensions:
-  cms:
-    branch: main
-    local_backend: false
-  academicons:
-    enable: true
-
-# Security
+############################
+## SECURITY
+############################
 
 security:
-  # Allow frame for embedding speaker notes in slides
   allow_frame: true
