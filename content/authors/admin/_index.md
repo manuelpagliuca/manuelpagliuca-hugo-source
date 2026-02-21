@@ -34,15 +34,60 @@ interests:
   - Mathematics
   - Artificial Intelligence
 
-# Education to show in About widget
 education:
-  courses:
-    - course: M.Sc. in Computer Science
-      institution: University of Milan --- "La Statale"
-      year: 2023
-    - course: B.Sc. in Computer Science
-      institution: University of Eastern Piedmont
-      year: 2020
+  - degree: M.Sc. in Computer Science
+    institution: 'University of Milan "La Statale"'
+    start: '2020-10-15'
+    end: '2023-10-09'
+    summary: >
+      [Certification 📄](/uploads/CertificazioneCarrieraEsami_Signed.pdf) ---
+      Thesis 🎓 [(light)](/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Light_.pdf) [(full)](/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Integral_.pdf) ---
+      Abstract 📃 [(en)](/uploads/Abstract_Master_s_Thesis__en_.pdf) [(it)](/uploads/Abstract_Master_s_Thesis__it_.pdf) ---
+      Slides ⏯[(en)](/uploads/Slides_Master.pdf)
+  - degree: B.Sc. in Computer Science
+    institution: University of Eastern Piedmont
+    start: '2017-09-10'
+    end: '2020-12-15'
+    summary: >
+      [Certification 📄](/uploads/UPO_CAREER_SIGNED.pdf) ---
+      [Thesis 🎓](/uploads/Manuel_Pagliuca_Tesi.pdf) ---
+      Abstract 📃 [(it)](/uploads/Abstract_bsc.pdf) [(en)](/uploads/Abstract_bsc_en_.pdf) ---
+      Slides ⏯[(en)](/uploads/Slides.pdf)
+
+work:
+  - role: Software Engineer
+    org: TrueLayer
+    start: '2025-11-17'
+    summary: (incoming)
+  - role: Software Engineer
+    org: Satispay SPA
+    start: '2024-10-08'
+    end: '2025-11-12'
+    summary: (incoming)
+  - role: Software Engineer Consultant
+    org: Sellinnate SRL
+    start: '2023-11-27'
+    end: '2024-07-31'
+    summary: >
+      I held the position of CAD plug-in developer for Knauf Digital GmBh,
+      responsible for the entire development of the Archicad plug-in including
+      new features, bug fixes, and the CI/CD pipeline for distribution.
+  - role: Software Engineer Intern
+    org: Verve Ventures AG
+    start: '2023-02-01'
+    end: '2023-07-01'
+    summary: >
+      Full-Stack Software Engineer experience. Worked with various stack
+      technologies, developed several features on the main codebase and
+      implemented a script for exchanging sensitive investor information.
+  - role: Software Developer Intern
+    org: Altec SRL
+    start: '2021-03-08'
+    end: '2021-06-16'
+    summary: >
+      Internship at a company specializing in Air Handling Units.
+      Contributed to the main codebase and developed several tools
+      for both internal use and customers.
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
