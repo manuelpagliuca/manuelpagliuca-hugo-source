@@ -1,6 +1,6 @@
 ---
 title: SETA - SElf-driving TA-xi service
-summary: Test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients.
+summary: Design and development of a peer-to-peer self-driving taxi service for a smart city, with distributed mutual exclusion and ride election algorithms.
 tags:
   - Distributed Systems
   - Misc

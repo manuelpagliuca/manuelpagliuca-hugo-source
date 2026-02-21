@@ -22,7 +22,7 @@ organizations:
     url: https://truelayer.com/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My interests concern Distributed Systems, Payments, Real-Time Graphics, GP-GPU and Artificial Intelligence.
+bio: My interests concern Distributed Systems, Payments, Artificial Intelligence.
 
 # Interests to show in About widget
 interests:
@@ -79,7 +79,7 @@ email: 'pagliuca.manuel@gmail.com'
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-Hello! 👋🏻 I am Manuel, a 29-year-old Software Engineer.
+Hello! 👋🏻 I am Manuel, a Software Engineer.
 
 Since an early age, I've had a passion for computers and videogames.
 

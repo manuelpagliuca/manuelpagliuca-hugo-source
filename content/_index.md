@@ -91,7 +91,7 @@ sections:
           company_logo: "truelayer"
           location: Milan, Italy
           date_start: "2025-11-17"
-          description: (incoming)
+          description: Software Engineer in the Consumer Banking Payments (CBP) team, working on integrating banking institutions into TrueLayer's open banking payment infrastructure.
 
         - title: Software Engineer
           company: Satispay SPA
@@ -100,7 +100,11 @@ sections:
           location: Milan, Italy
           date_start: "2024-10-08"
           date_end: "2025-11-12"
-          description: (incoming)
+          description: |2-
+            Maintained and evolved the CRM microservice, a core ETL pipeline ingesting events from SQS queues and syncing data with Braze, developing 20 data flows for targeted CRM campaigns.
+            Engineered the Loyalty feature ingestion flow, preventing a projected 90% increase in outbound messages through efficient event filtering and flow isolation, and enabling precise targeting with a 70% opt-in rate post-launch.
+            Implemented rate-limiting at the gateway level to protect the reward promotion API, improving p99 latency by 60% during traffic spikes (from 500ms to <250ms).
+            Integrated BNPL events into the transaction list with full support for comments and metadata.
 
         - title: Software Engineer Consultant
           company: Sellinnate SRL
