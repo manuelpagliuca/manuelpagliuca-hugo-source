@@ -1,0 +1,7 @@
+{{- $url := .Get 0 -}}
+{{- $target := .Get 1 -}}
+{{- if eq $target "newtab" -}}
+<a href="{{ $url }}" target="_blank" rel="noopener">{{ .Inner }}</a>
+{{- else -}}
+<a href="{{ $url }}">{{ .Inner }}</a>
+{{- end -}}
