@@ -35,10 +35,11 @@ sections:
   #       gradient_end: '#1976d2'
   #       gradient_start: '#004ba0'
   #       text_color_light: true
-  - block: resume-biography-3
+  - block: about.biography
     id: about
     content:
       title: Biography
+      # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
 
   # Showcase personal skills or business features.
@@ -72,10 +73,94 @@ sections:
   #       icon: bolt-solid
   #       icon_pack: custom
   #       name: Fast learner
-  - block: resume-experience
+  - block: experience
     content:
-      title: Experience & Education
-      username: admin
+      title: Job Experience
+      # Date format for experience
+      #   Refer to https://wowchemy.com/docs/customization/#date-format
+      date_format: Jan 2006
+      # Experiences.
+      #   Add/remove as many `experience` items below as you like.
+      #   Required fields are `title`, `company`, and `date_start`.
+      #   Leave `date_end` empty if it's your current employer.
+      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+      items:
+        - title: Software Engineer
+          company: TrueLayer
+          company_url: "https://www.truelayer.com/"
+          company_logo: "satispay"
+          location: Milan, Italy
+          date_start: "2025-11-17"
+          description: (incoming)
+
+        - title: Software Engineer
+          company: Satispay SPA
+          company_url: "https://www.satispay.com/"
+          company_logo: "satispay"
+          location: Milan, Italy
+          date_start: "2024-10-08"
+          date_end: "2025-11-12"
+          description: (incoming)
+
+        - title: Software Engineer Consultant
+          company: Sellinnate SRL
+          company_url: "https://sellinnate.com/"
+          company_logo: "knauf"
+          location: Florence, Italy (Remote)
+          date_start: "2023-11-27"
+          date_end: "2024-07-31"
+          description: I held the position of CAD plug-in developer for <a href="https://knauf.com/en" target="_blank">Knauf Digital GmBh</a>, I was responsible for the entire development of Archicad. This included both the development of new features and bug fixes, as well as the CI/CD pipeline for the distribution of this plug-in version.
+
+        - title: Software Engineer Intern
+          company: Verve Ventures AG
+          company_url: "https://www.verve.vc/"
+          company_logo: "verve"
+          location: Zurich, Switzerland
+          date_start: "2023-02-01"
+          date_end: "2023-07-01"
+          description: Work experience as a Full-Stack Software Engineer, I learned how to work with various stack technologies. I developed several features on the main code base and implemented a script for exchanging sensitive investor information.
+
+        - title: Software Developer Intern
+          company: Altec SRL
+          company_url: "https://www.altecsoftware.com/"
+          company_logo: "altec"
+          location: Arona, Italy
+          date_start: "2021-03-08"
+          date_end: "2021-06-16"
+          description: Internship experience at a company specializing in Air Handling Units, in addition to contributing on the main codebase by developing features, I also developed several tools both for internal use and for the customer.
+    design:
+      columns: '2'
+
+  - block: experience
+    content:
+      title: Academic Education
+      # Date format for experience
+      #   Refer to https://wowchemy.com/docs/customization/#date-format
+      date_format: Jan 2006
+      # Experiences.
+      #   Add/remove as many `experience` items below as you like.
+      #   Required fields are `title`, `company`, and `date_start`.
+      #   Leave `date_end` empty if it's your current employer.
+      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+      items:
+      - title: Master's Degree in Computer Science
+        company: University of Milan --- "La Statale"
+        company_url: "https://www.unimi.it/it/corsi/laurea-magistrale/informatica-magistrale"
+        company_logo: "unimi"
+        location: Milan, Italy
+        date_start: "2020-10-15"
+        date_end: "2023-10-09"
+        description: "[Certification 📄](/uploads/CertificazioneCarrieraEsami_Signed.pdf) --- Thesis 🎓 [(light)](/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Light_.pdf) [(full)](/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Integral_.pdf) --- Abstract 📃 [(en)](/uploads/Abstract_Master_s_Thesis__en_.pdf) [(it)](/uploads/Abstract_Master_s_Thesis__it_.pdf) --- Slides ⏯[(en)](/uploads/Slides_Master.pdf)"
+      - title: Bachelor's Degree in Computer Science
+        company: University of Eastern Piedmont
+        company_url: "https://disit.uniupo.it/it/didattica/corsi-di-laurea/informatica"
+        company_logo: "upo"
+        location: Vercelli, Italy
+        date_start: "2017-09-10"
+        date_end: "2020-12-15"
+        description: "[Certification 📄](/uploads/UPO_CAREER_SIGNED.pdf) --- [Thesis 🎓](/uploads/Manuel_Pagliuca_Tesi.pdf) --- Abstract 📃[(it)](/uploads/Abstract_bsc.pdf) [(en)](/uploads/Abstract_bsc_en_.pdf) --- Slides ⏯[(en)](/uploads/Slides.pdf)"
+    design:
+      columns: '2'
 
   # TODO: Blocco interessante, magari aggiungere gli attestati ottenuti sui MOOC in futuro
   # - block: accomplishments
@@ -238,10 +323,54 @@ sections:
   #   design:
   #     columns: '2'
   #     view: compact
-  - block: contact-info
+  - block: tag_cloud
+    content:
+      title: Popular Topics
+    design:
+      columns: '2'
+  - block: contact
     id: contact
     content:
       title: Contact
-      subtitle: For more information please feel free to contact me, I am often available 😊
+      subtitle:
+      text: For more information please feel free to contact me, I am often available 😊
+      # Contact (add or remove contact options as necessary)
       email: pagliuca.manuel@gmail.com
+      # appointment_url: 'https://calendly.com'
+      # address:
+      #   # street: 450 Serra Mall
+      #   # city: Stanford
+      #   # region: CA
+      #   # postcode: '94305'
+      #   country: Italy
+      #   country_code: IT
+      # directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+      office_hours:
+        #- 'Mon-Fri 09:00 to 12:00'
+        # - 'Wednesday 09:00 to 10:00'
+      contact_links:
+        # - icon: twitter
+        #   icon_pack: fab
+        #   name: DM Me
+        #   link: 'https://twitter.com/manuelpagliuca'
+        #- icon: skype
+        #  icon_pack: fab
+        #  name: Skype Me
+        #  link: 'skype:live:.cid.112d3cb29c20d377?call'
+        #- icon: video
+        #  icon_pack: fas
+        #  name: Zoom Me
+        #  link: 'https://zoom.com'
+      # Automatically link email and phone or display as text?
+      autolink: true
+      # Email form provider
+      # form:
+      #   provider: netlify
+      #   formspree:
+      #     id:
+      #   netlify:
+      #     # Enable CAPTCHA challenge to reduce spam?
+      #     captcha: false
+    design:
+      columns: '2'
 ---
