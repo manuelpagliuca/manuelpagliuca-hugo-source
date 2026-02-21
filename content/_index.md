@@ -88,7 +88,7 @@ sections:
         - title: Software Engineer
           company: TrueLayer
           company_url: "https://www.truelayer.com/"
-          company_logo: "satispay"
+          company_logo: "truelayer"
           location: Milan, Italy
           date_start: "2025-11-17"
           description: (incoming)
